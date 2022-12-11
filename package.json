@@ -5,12 +5,12 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-	  "scss": "start sass --watch scss:public/css",
-	  "sync": "start browser-sync start --proxy localhost:3000 --files public",
-	  
-	  "dev": "npm run scss && npm run sync && nodemon server.js",
-	  "start": "node server.js"
+    "scss": "sass --watch scss:public/css",
+    "sync": "browser-sync start --proxy localhost:3000 --files public",
+    "nodemon": "nodemon server.js",
 
+    "dev": "start npm run nodemon && start npm run scss && start npm run sync",
+    "start": "node server.js"
   },
   "author": "Vladimir Kondaurov",
   "license": "ISC",
@@ -18,6 +18,8 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "browser-sync": "^2.27.10",
+    "nodemon": "^2.0.20",
+    "sass": "^1.56.2"
   }
 }
